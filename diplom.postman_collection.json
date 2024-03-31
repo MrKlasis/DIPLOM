@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "e1ce61ef-228e-431d-844d-4ad3d27bbe3a",
+		"name": "diplom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30350937"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"789456123346\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/phone/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"phone",
+						""
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "789456123",
+							"disabled": true
+						},
+						{
+							"key": "CSRF_COOKIE_SECURE",
+							"value": "False",
+							"disabled": true
+						},
+						{
+							"key": "SESSION_COOKIE_SECURE",
+							"value": "False",
+							"disabled": true
+						},
+						{
+							"key": "CSRF_COOKIE_HTTPONLY",
+							"value": "False",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"1782\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/code/?phone=987654321",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"code",
+						""
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "987654321"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aut",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0MTExNzQzLCJpYXQiOjE3MDQxMDgxNDMsImp0aSI6IjFmODY3NWUxNmIzODRkMjZiOTlmMTVjYThhNDExYTc5IiwidXNlcl9pZCI6M30.sGNscneknWxU1wHk2fwfUbHIa550rpWsgqrUVAQm2Pc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"987654321\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/profile/17/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"profile",
+						"17",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
